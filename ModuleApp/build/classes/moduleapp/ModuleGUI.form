@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="moduleTitleLbl" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="moduleLbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="moduleTxt" min="-2" pref="96" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lecturerLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="timeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tutorial1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tutorial2Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labAssistantLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labTimeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lecturerTxt" max="32767" attributes="0"/>
+                                  <Component id="dateTxt" max="32767" attributes="0"/>
+                                  <Component id="timeTxt" max="32767" attributes="0"/>
+                                  <Component id="tutorial1Txt" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tutorial2Txt" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="labAssistantTxt" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="labTimeTxt" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="addModuleBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="displayBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="deleteBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="businessBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="technicalBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="moduleTitleLbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="moduleLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="moduleTxt" min="-2" max="-2" attributes="0"/>
+                  <Component id="addModuleBtn" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lecturerLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="lecturerTxt" min="-2" max="-2" attributes="0"/>
+                  <Component id="displayBtn" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="dateLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="dateTxt" min="-2" max="-2" attributes="0"/>
+                  <Component id="searchBtn" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="timeLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="timeTxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="deleteBtn" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="tutorial1Lbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="tutorial1Txt" min="-2" max="-2" attributes="0"/>
+                  <Component id="businessBtn" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="tutorial2Lbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="tutorial2Txt" min="-2" max="-2" attributes="0"/>
+                  <Component id="technicalBtn" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="labAssistantLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="labAssistantTxt" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="labTimeLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="labTimeTxt" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="moduleTitleLbl">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Module Application"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="moduleLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Module Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lecturerLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lecturer Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="dateLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Date"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="timeLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Time"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="moduleTxt">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moduleTxtActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lecturerTxt">
+    </Component>
+    <Component class="javax.swing.JTextField" name="dateTxt">
+    </Component>
+    <Component class="javax.swing.JTextField" name="timeTxt">
+    </Component>
+    <Component class="javax.swing.JLabel" name="tutorial1Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tutorial 1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tutorial2Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tutorial 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labAssistantLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lab Assistant"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labTimeLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lab Time"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tutorial1Txt">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tutorial2Txt">
+    </Component>
+    <Component class="javax.swing.JTextField" name="labAssistantTxt">
+    </Component>
+    <Component class="javax.swing.JTextField" name="labTimeTxt">
+    </Component>
+    <Component class="javax.swing.JButton" name="addModuleBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add Module"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addModuleBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="displayBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Display Modules"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="displayBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="searchBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search for Modules"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="deleteBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete Modules"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="businessBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Business Module"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="businessBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="technicalBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Technical Module"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="technicalBtnActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
