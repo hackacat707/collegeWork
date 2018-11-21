@@ -75,6 +75,6 @@ public class registerData extends loginData implements Serializable{
     
     public String getDetails(){
  
-        return super.getDetails()+"your email is"+email+"ypur phone number is"+phone+ " ";
+        return super.getDetails()+" your email is "+email+ " " + "your phone number is " + " " + phone+ " ";
     }
 }

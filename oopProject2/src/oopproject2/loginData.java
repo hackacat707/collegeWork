@@ -43,7 +43,7 @@ public class loginData implements Serializable{
     }
     
   public String getDetails(){
-      return name+""+surname ;
+      return name+" "+surname ;
   }  
     
     

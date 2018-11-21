@@ -21,8 +21,9 @@ public class RegisterApp {
 
         //lGUI.setVisible(true);
         
-        RegisterGUI reGUI = new RegisterGUI();
-        reGUI.setVisible(true);
+        
+        Welcome welcome = new Welcome();
+        welcome.setVisible(true);
     }
 
 }

@@ -234,7 +234,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         for (int i = 0; i < ioana.size(); i++) {
             ///JOptionPane.showMessageDialog(null, ioana.get(i));
-            JOptionPane.showMessageDialog(null, "the details are" + ioana.get(i).getDetails());
+            JOptionPane.showMessageDialog(null, "the details are " + ioana.get(i).getDetails());
         }
     }//GEN-LAST:event_displayBtnActionPerformed
 
