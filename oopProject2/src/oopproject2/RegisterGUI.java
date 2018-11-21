@@ -29,13 +29,14 @@ public class RegisterGUI extends javax.swing.JFrame {
     String email;
     String phone;
     String retype;
+    
 
     /**
      * Creates new form DataGUI
      */
     public RegisterGUI() {
         initComponents();
-        
+
         readFromFile();
     }
 
@@ -65,6 +66,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         addBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        toLoginBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,6 +114,13 @@ public class RegisterGUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Username");
 
+        toLoginBtn.setText("Login");
+        toLoginBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toLoginBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -153,8 +162,9 @@ public class RegisterGUI extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(displayBtn)
-                    .addComponent(addBtn))
-                .addGap(37, 37, 37))
+                    .addComponent(addBtn)
+                    .addComponent(toLoginBtn))
+                .addGap(31, 31, 31))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,7 +187,9 @@ public class RegisterGUI extends javax.swing.JFrame {
                             .addComponent(surnameLbl))))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(toLoginBtn))
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -195,7 +207,7 @@ public class RegisterGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(emailLbl))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -204,57 +216,65 @@ public class RegisterGUI extends javax.swing.JFrame {
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         // TODO add your handling code here:
         u = new registerData();
-            u.setName(nameTxt.getText());
-            u.setSurname(surnameTxt.getText());
-            if (u instanceof registerData ){
-                registerData t = (registerData)u;
-    
-           ((registerData)(u)).setPassword(passwordTxt.getText());
-            ((registerData)(u)).setEmail(emailTxt.getText());
-            ((registerData)(u)).setPhone(phoneTxt.getText());
-            ((registerData)(u)).setRetype(retypeTxt.getText());
-            }
-            ioana.add(u);
-             writeToFile();
+        u.setName(nameTxt.getText());
+        u.setSurname(surnameTxt.getText());
+        if (u instanceof registerData) {
+            registerData t = (registerData) u;
+
+            ((registerData) (u)).setPassword(passwordTxt.getText());
+            ((registerData) (u)).setEmail(emailTxt.getText());
+            ((registerData) (u)).setPhone(phoneTxt.getText());
+            ((registerData) (u)).setRetype(retypeTxt.getText());
+        }
+        ioana.add(u);
+        writeToFile();
     }//GEN-LAST:event_addBtnActionPerformed
 
     private void displayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayBtnActionPerformed
         // TODO add your handling code here:
         for (int i = 0; i < ioana.size(); i++) {
             ///JOptionPane.showMessageDialog(null, ioana.get(i));
-            JOptionPane.showMessageDialog(null ,"the details are"+ioana.get(i).getDetails());
+            JOptionPane.showMessageDialog(null, "the details are" + ioana.get(i).getDetails());
         }
     }//GEN-LAST:event_displayBtnActionPerformed
 
     private void surnameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surnameTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_surnameTxtActionPerformed
-    public void writeToFile(){
-            try{
-                File f  = new File("ioana.dat");
-                FileOutputStream fStream = new FileOutputStream(f);
-                ObjectOutputStream oStream = new ObjectOutputStream(fStream);
-               oStream.writeObject(ioana);
-               
-                oStream.close();
-            }
-            catch(IOException e){
-                System.out.println(e);
-            }
-        
+
+    private void toLoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toLoginBtnActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        LoginGUI lGUI = new LoginGUI();
+
+        lGUI.setVisible(true);
+    }//GEN-LAST:event_toLoginBtnActionPerformed
+    public void writeToFile() {
+        try {
+            File f = new File("ioana.dat");
+            FileOutputStream fStream = new FileOutputStream(f);
+            ObjectOutputStream oStream = new ObjectOutputStream(fStream);
+            oStream.writeObject(ioana);
+
+            oStream.close();
+        } catch (IOException e) {
+            System.out.println(e);
         }
-    public void readFromFile(){
-            try {
-                File f = new File ("ioana.dat");
-                FileInputStream fStream = new FileInputStream(f);
-                ObjectInputStream oStream = new ObjectInputStream(fStream);
-                ioana = (ArrayList<loginData>)oStream.readObject();
-                oStream.close();
-            }
-            catch(IOException | ClassNotFoundException ex){
-                System.out.println(ex);
-            }
+
     }
+
+    public void readFromFile() {
+        try {
+            File f = new File("ioana.dat");
+            FileInputStream fStream = new FileInputStream(f);
+            ObjectInputStream oStream = new ObjectInputStream(fStream);
+            ioana = (ArrayList<loginData>) oStream.readObject();
+            oStream.close();
+        } catch (IOException | ClassNotFoundException ex) {
+            System.out.println(ex);
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -310,5 +330,6 @@ public class RegisterGUI extends javax.swing.JFrame {
     private javax.swing.JLabel surnameLbl;
     private javax.swing.JTextField surnameTxt;
     private javax.swing.JLabel titleLbl;
+    private javax.swing.JButton toLoginBtn;
     // End of variables declaration//GEN-END:variables
 }

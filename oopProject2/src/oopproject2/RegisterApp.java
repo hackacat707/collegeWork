@@ -10,15 +10,19 @@ package oopproject2;
  * @author Anna
  */
 public class RegisterApp {
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        //LoginGUI lGUI = new LoginGUI();
+
+        //lGUI.setVisible(true);
         
-        RegisterGUI dGUI = new RegisterGUI();
-        
-        dGUI.setVisible(true);
+        RegisterGUI reGUI = new RegisterGUI();
+        reGUI.setVisible(true);
     }
-    
+
 }
