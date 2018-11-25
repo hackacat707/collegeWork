@@ -64,8 +64,8 @@ public class RegisterGUI extends javax.swing.JFrame {
         retypeTxt = new javax.swing.JTextField();
         displayBtn = new javax.swing.JButton();
         addBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        userLbl = new javax.swing.JLabel();
+        userTxt = new javax.swing.JTextField();
         toLoginBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -111,8 +111,8 @@ public class RegisterGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Username");
+        userLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        userLbl.setText("Username");
 
         toLoginBtn.setText("Login");
         toLoginBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -142,10 +142,10 @@ public class RegisterGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(passwordLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
+                            .addComponent(userLbl))
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1)
+                            .addComponent(userTxt)
                             .addComponent(passwordTxt)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(nameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,9 +188,9 @@ public class RegisterGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(userTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(toLoginBtn))
-                    .addComponent(jLabel1))
+                    .addComponent(userLbl))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,18 +215,20 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         // TODO add your handling code here:
-        u = new registerData();
-        u.setName(nameTxt.getText());
-        u.setSurname(surnameTxt.getText());
-        if (u instanceof registerData) {
-            registerData t = (registerData) u;
+        registerData t = new registerData();
+        t.setName(nameTxt.getText());
+        t.setSurname(surnameTxt.getText());
+        if (t instanceof registerData) {
+             
+            t = (registerData) t;
 
-            ((registerData) (u)).setPassword(passwordTxt.getText());
-            ((registerData) (u)).setEmail(emailTxt.getText());
-            ((registerData) (u)).setPhone(phoneTxt.getText());
-            ((registerData) (u)).setRetype(retypeTxt.getText());
+            ((registerData) (t)).setPassword(passwordTxt.getText());
+            ((registerData) (t)).setUsername(userTxt.getText());
+            t.setEmail(emailTxt.getText());
+            t.setPhone(phoneTxt.getText());
+            t.setRetype(retypeTxt.getText());
         }
-        ioana.add(u);
+        ioana.add(t);
         writeToFile();
     }//GEN-LAST:event_addBtnActionPerformed
 
@@ -317,8 +319,6 @@ public class RegisterGUI extends javax.swing.JFrame {
     private javax.swing.JButton displayBtn;
     private javax.swing.JLabel emailLbl;
     private javax.swing.JTextField emailTxt;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel nameLbl;
     private javax.swing.JTextField nameTxt;
     private javax.swing.JLabel passwordLbl;
@@ -331,5 +331,7 @@ public class RegisterGUI extends javax.swing.JFrame {
     private javax.swing.JTextField surnameTxt;
     private javax.swing.JLabel titleLbl;
     private javax.swing.JButton toLoginBtn;
+    private javax.swing.JLabel userLbl;
+    private javax.swing.JTextField userTxt;
     // End of variables declaration//GEN-END:variables
 }

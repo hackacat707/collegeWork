@@ -12,42 +12,49 @@ import java.io.Serializable;
  * @author Anna
  */
 public class registerData extends loginData implements Serializable{
-    private String password;
+    private String name;
+    private String surname;
     private String email;
     private String phone;
     private String retype;
-    
-    
 
-    public registerData(String password, String email, String phone, String retype, String name, String surname) {
-        super(name, surname);
-        this.password = password;
+    public registerData(String name, String surname, String email, String phone, String retype, String username, String password) {
+        super(username, password);
+        this.name = name;
+        this.surname = surname;
         this.email = email;
         this.phone = phone;
         this.retype = retype;
     }
+    
+
+   
 
     public registerData() {
         super();
-        password ="";
+        name = "";
+        surname = "";
         email="";
         phone="";
         retype="";
-        
     }
 
-    public String getPassword() {
-        return password;
+    public String getName() {
+        return name;
     }
 
-   
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setName(String name) {
+        this.name = name;
     }
 
-   
+    public String getSurname() {
+        return surname;
+    }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+    
     public String getEmail() {
         return email;
     }

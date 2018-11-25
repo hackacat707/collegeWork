@@ -5,12 +5,22 @@
  */
 package oopproject2;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+
 /**
  *
  * @author x17448556
  */
 public class LoginGUI extends javax.swing.JFrame {
-
+    loginData u;
+    registerData t;
+    String username;
+    String password;
+    ArrayList<loginData> ioana = new ArrayList();
     /**
      * Creates new form LoginGUI
      */
@@ -19,7 +29,7 @@ public class LoginGUI extends javax.swing.JFrame {
 
     public LoginGUI() {
         initComponents();
-
+        readFromFile();
     }
 
     /**
@@ -30,85 +40,131 @@ public class LoginGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        loginPanel = new javax.swing.JPanel();
         loginTitleLbl = new javax.swing.JLabel();
-        loginNamelbl = new javax.swing.JLabel();
         loginNameTxt = new javax.swing.JTextField();
+        loginNamelbl = new javax.swing.JLabel();
         loginPassLbl = new javax.swing.JLabel();
         loginPassTxt = new javax.swing.JTextField();
         loginBtn = new javax.swing.JButton();
         guestBtn = new javax.swing.JButton();
+        staffLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        loginPanel.setLayout(new java.awt.GridBagLayout());
+
         loginTitleLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         loginTitleLbl.setText("Login");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 4, 0, 159);
+        loginPanel.add(loginTitleLbl, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 77;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 4, 0, 0);
+        loginPanel.add(loginNameTxt, gridBagConstraints);
 
         loginNamelbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         loginNamelbl.setText("Username");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 66, 0, 0);
+        loginPanel.add(loginNamelbl, gridBagConstraints);
 
         loginPassLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         loginPassLbl.setText("Password");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 66, 0, 0);
+        loginPanel.add(loginPassLbl, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 77;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 4, 0, 0);
+        loginPanel.add(loginPassTxt, gridBagConstraints);
 
+        loginBtn.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         loginBtn.setText("Login");
         loginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginBtnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 66, 0, 0);
+        loginPanel.add(loginBtn, gridBagConstraints);
 
+        guestBtn.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         guestBtn.setText("Guest?");
         guestBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guestBtnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        loginPanel.add(guestBtn, gridBagConstraints);
+
+        staffLogin.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        staffLogin.setText("Staff login");
+        staffLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staffLoginActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 66, 93, 0);
+        loginPanel.add(staffLogin, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(173, Short.MAX_VALUE)
-                .addComponent(loginTitleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(133, 133, 133))
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(loginBtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(guestBtn))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(loginPassLbl)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(loginPassTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(loginNamelbl)
-                            .addGap(18, 18, 18)
-                            .addComponent(loginNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(loginTitleLbl)
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(loginNamelbl)
-                    .addComponent(loginNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginPassLbl)
-                    .addComponent(loginPassTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginBtn)
-                    .addComponent(guestBtn))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -116,6 +172,19 @@ public class LoginGUI extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
+        loginData u = new loginData();
+        registerData t = new registerData();
+        username = loginNameTxt.getText();
+        password = loginPassTxt.getText();
+        if(username.equalsIgnoreCase("bob123") && password.equalsIgnoreCase("bob123"))
+        {
+            System.out.println("Welcome to the coffee shop");
+        }
+        else
+        {
+            System.out.println("You have entered incorrect information");
+        }
+        
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void guestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guestBtnActionPerformed
@@ -126,6 +195,24 @@ public class LoginGUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_guestBtnActionPerformed
 
+    private void staffLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffLoginActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        StaffLogin staff = new StaffLogin();
+
+        staff.setVisible(true);
+    }//GEN-LAST:event_staffLoginActionPerformed
+    public void readFromFile() {
+        try {
+            File f = new File("ioana.dat");
+            FileInputStream fStream = new FileInputStream(f);
+            ObjectInputStream oStream = new ObjectInputStream(fStream);
+            ioana = (ArrayList<loginData>) oStream.readObject();
+            oStream.close();
+        } catch (IOException | ClassNotFoundException ex) {
+            System.out.println(ex);
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -166,8 +253,10 @@ public class LoginGUI extends javax.swing.JFrame {
     private javax.swing.JButton loginBtn;
     private javax.swing.JTextField loginNameTxt;
     private javax.swing.JLabel loginNamelbl;
+    private javax.swing.JPanel loginPanel;
     private javax.swing.JLabel loginPassLbl;
     private javax.swing.JTextField loginPassTxt;
     private javax.swing.JLabel loginTitleLbl;
+    private javax.swing.JButton staffLogin;
     // End of variables declaration//GEN-END:variables
 }
