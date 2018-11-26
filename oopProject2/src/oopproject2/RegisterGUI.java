@@ -22,14 +22,16 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     loginData u;
     registerData t;
-    ArrayList<loginData> ioana = new ArrayList();
+    ArrayList<loginData> details = new ArrayList();
+    ArrayList<loginData> passArray = new ArrayList();
+    ArrayList<loginData> userArray = new ArrayList();
     String name;
     String surname;
     String password;
+    String username;
     String email;
     String phone;
     String retype;
-    
 
     /**
      * Creates new form DataGUI
@@ -216,28 +218,38 @@ public class RegisterGUI extends javax.swing.JFrame {
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         // TODO add your handling code here:
         registerData t = new registerData();
+        loginData u = new loginData();
         t.setName(nameTxt.getText());
         t.setSurname(surnameTxt.getText());
         if (t instanceof registerData) {
-             
-            t = (registerData) t;
 
-            ((registerData) (t)).setPassword(passwordTxt.getText());
-            ((registerData) (t)).setUsername(userTxt.getText());
+            t = (registerData) t;
+            u = (loginData) u;
+
+            //((registerData) (t)).setPassword(passwordTxt.getText());
+            //((registerData) (t)).setUsername(userTxt.getText());
+            u.setPassword(passwordTxt.getText());
+            u.setUsername(userTxt.getText());
             t.setEmail(emailTxt.getText());
             t.setPhone(phoneTxt.getText());
             t.setRetype(retypeTxt.getText());
         }
-        ioana.add(t);
+        details.add(t);
+        userArray.add(u);
+        passArray.add(u);
         writeToFile();
     }//GEN-LAST:event_addBtnActionPerformed
 
     private void displayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayBtnActionPerformed
         // TODO add your handling code here:
-        for (int i = 0; i < ioana.size(); i++) {
-            ///JOptionPane.showMessageDialog(null, ioana.get(i));
-            JOptionPane.showMessageDialog(null, "the details are " + ioana.get(i).getDetails());
+        for (int i = 0; i < userArray.size(); i++) {
+            
+            JOptionPane.showMessageDialog(null, "the details are " + userArray.get(i).getUser());
         }
+        for (int i = 0; i < passArray.size(); i++) {
+            JOptionPane.showMessageDialog(null, " " + passArray.get(i).getPass());
+        }
+
     }//GEN-LAST:event_displayBtnActionPerformed
 
     private void surnameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surnameTxtActionPerformed
@@ -253,10 +265,21 @@ public class RegisterGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_toLoginBtnActionPerformed
     public void writeToFile() {
         try {
-            File f = new File("ioana.dat");
+            File f = new File("user.dat");
             FileOutputStream fStream = new FileOutputStream(f);
             ObjectOutputStream oStream = new ObjectOutputStream(fStream);
-            oStream.writeObject(ioana);
+            oStream.writeObject(userArray);
+            oStream.writeObject(passArray);
+
+            oStream.close();
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        try {
+            File f = new File("details.dat");
+            FileOutputStream fStream = new FileOutputStream(f);
+            ObjectOutputStream oStream = new ObjectOutputStream(fStream);
+            oStream.writeObject(details);
 
             oStream.close();
         } catch (IOException e) {
@@ -267,10 +290,11 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     public void readFromFile() {
         try {
-            File f = new File("ioana.dat");
+            File f = new File("user.dat");
             FileInputStream fStream = new FileInputStream(f);
             ObjectInputStream oStream = new ObjectInputStream(fStream);
-            ioana = (ArrayList<loginData>) oStream.readObject();
+            userArray = (ArrayList<loginData>) oStream.readObject();
+            passArray = (ArrayList<loginData>) oStream.readObject();
             oStream.close();
         } catch (IOException | ClassNotFoundException ex) {
             System.out.println(ex);

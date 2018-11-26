@@ -44,8 +44,12 @@ public class loginData implements Serializable {
         this.password = password;
     }
 
-    public String getDetails() {
-        return "your username is "+username;
+    public String getUser() {
+        return " your username is "+username;
+        
+    }
+    public String getPass(){
+        return "your password is " +password;
     }
 
 }
