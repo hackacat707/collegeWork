@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oopproject2;
+package oopProjectFinal;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -179,15 +179,16 @@ public class LoginGUI extends javax.swing.JFrame {
         if(username.equalsIgnoreCase("bob123") && password.equalsIgnoreCase("bob123"))
         {
             System.out.println("Welcome to the coffee shop");
+            this.setVisible(false);
+        OrderGUI order = new OrderGUI();
+
+        order.setVisible(true);
         }
         else
         {
             System.out.println("You have entered incorrect information");
         }
-        this.setVisible(false);
-        OrderGUI order = new OrderGUI();
-
-        order.setVisible(true);
+        
         
     }//GEN-LAST:event_loginBtnActionPerformed
 

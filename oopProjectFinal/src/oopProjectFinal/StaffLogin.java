@@ -3,14 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oopproject2;
+package oopProjectFinal;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author x17448556
  */
 public class StaffLogin extends javax.swing.JFrame {
-
+    loginData u;
+    registerData t;
+    String username;
+    String password;
+    ArrayList<loginData> details = new ArrayList();
     /**
      * Creates new form LoginGUI
      */
@@ -116,10 +122,23 @@ public class StaffLogin extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        hrGUI hr = new hrGUI();
+        loginData u = new loginData();
+        registerData t = new registerData();
+        username = staffNameTxt.getText();
+        password = staffPassTxt.getText();
+        if(username.equalsIgnoreCase("alice123") && password.equalsIgnoreCase("alice123"))
+        {
+            System.out.println("Welcome to the coffee shop");
+            this.setVisible(false);
+        hrGUI resource = new hrGUI();
 
-        hr.setVisible(true);
+        resource.setVisible(true);
+        }
+        else
+        {
+            System.out.println("You have entered incorrect information");
+        }
+        
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void customerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerBtnActionPerformed
