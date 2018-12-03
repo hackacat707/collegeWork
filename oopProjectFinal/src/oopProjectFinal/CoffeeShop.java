@@ -10,7 +10,7 @@ package oopProjectFinal;
  * @author x17432284
  */
 public class CoffeeShop {
-    
+    //variables
     public Double total;
     private String Drink;
     private String Sugar;
@@ -41,7 +41,8 @@ public class CoffeeShop {
         this.SugarCost = SugarCost;
         this.DrinkCost = DrinkCost;
     }
-
+    
+    //getters and setters
     public Double getTotal() {
         return total;
     }
@@ -97,10 +98,13 @@ public class CoffeeShop {
     public void setDrinkCost(Double DrinkCost) {
         this.DrinkCost = DrinkCost;
     }
+    
+    //formula for what to print
     public String printDetails(){
         return "Drink:" +Drink+ ", Sugar:" + Sugar +", Milk:" +Milk;
     }
     
+    //computing total cost
     public void computeTotalCost(){
         if(Sugar.equalsIgnoreCase("Yes")) {
             SugarCost=0.50;

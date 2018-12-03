@@ -94,6 +94,7 @@ public class Welcome extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
+        //brings to the login page
         this.setVisible(false);
         LoginGUI lGUI = new LoginGUI();
 
@@ -102,6 +103,7 @@ public class Welcome extends javax.swing.JFrame {
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
         // TODO add your handling code here:
+        //brings to the register page
         this.setVisible(false);
         RegisterGUI reGUI = new RegisterGUI();
 
@@ -110,10 +112,12 @@ public class Welcome extends javax.swing.JFrame {
 
     private void guestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guestBtnActionPerformed
         // TODO add your handling code here:
+        //brings to the order page which will bring to the register page
         this.setVisible(false);
         OrderGUI order = new OrderGUI();
 
         order.setVisible(true);
+        
         
     }//GEN-LAST:event_guestBtnActionPerformed
 

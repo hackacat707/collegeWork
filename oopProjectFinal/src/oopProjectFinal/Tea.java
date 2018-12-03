@@ -10,6 +10,8 @@ package oopProjectFinal;
  * @author x17432284
  */
 public class Tea extends CoffeeShop{
+    
+    //variables
     private String TeaType;
     private Double TeaTypeCost;
     public Double total;
@@ -30,7 +32,7 @@ public class Tea extends CoffeeShop{
         total = 0.0;
         
     }
-
+    //getters and setters
     public String getTeaType() {
         return TeaType;
     }
@@ -47,7 +49,7 @@ public class Tea extends CoffeeShop{
         this.TeaTypeCost = TeaTypeCost;
     }
 
-   
+   //overriding the calculations from CoffeeShop.java
     @Override
     public Double getTotal() {
         return total;

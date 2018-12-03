@@ -4,28 +4,31 @@
  * and open the template in the editor.
  */
 package oopProjectFinal;
-
+//all imports are here
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
+
 /**
  *
  * @author x17448556
  */
+//the login gui class with the arrays
 public class LoginGUI extends javax.swing.JFrame {
+
     loginData u;
     registerData t;
-    String username;
-    String password;
+//here are the arrays
     ArrayList<loginData> details = new ArrayList();
+    ArrayList<loginData> passArray = new ArrayList();
+    ArrayList<loginData> userArray = new ArrayList();
+
     /**
      * Creates new form LoginGUI
      */
-   
-    
 
     public LoginGUI() {
         initComponents();
@@ -172,53 +175,62 @@ public class LoginGUI extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
+        //the login button code
+        //i can't figure out how to compare input to the text written to the file so i made a sort of default placeholder user and pass
+        
         loginData u = new loginData();
         registerData t = new registerData();
+        //here we get the input as string and put it in the variable username and password
+        String username;
         username = loginNameTxt.getText();
-        password = loginPassTxt.getText();
-        if(username.equalsIgnoreCase("bob123") && password.equalsIgnoreCase("bob123"))
-        {
+        String password = loginPassTxt.getText();
+        
+        //if statement to compare user and pass
+        if (username.equals("bob") && password.equals("bob123")) {
             System.out.println("Welcome to the coffee shop");
             this.setVisible(false);
-        OrderGUI order = new OrderGUI();
+            OrderGUI order = new OrderGUI();
 
-        order.setVisible(true);
-        }
-        else
-        {
+            order.setVisible(true);
+        } else {
             System.out.println("You have entered incorrect information");
         }
-        
-        
+
+
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void guestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guestBtnActionPerformed
         // TODO add your handling code here:
+        //this is the guest button for when you havent registered yet
         this.setVisible(false);
         OrderGUI order = new OrderGUI();
 
         order.setVisible(true);
-        
+
     }//GEN-LAST:event_guestBtnActionPerformed
 
     private void staffLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffLoginActionPerformed
         // TODO add your handling code here:
+        //this is the staff login button to access the payrol and HR pages
         this.setVisible(false);
         StaffLogin staff = new StaffLogin();
 
         staff.setVisible(true);
     }//GEN-LAST:event_staffLoginActionPerformed
     public void readFromFile() {
+        //this is the reading from file class
         try {
-            File f = new File("details.dat");
+            File f = new File("user.dat");
             FileInputStream fStream = new FileInputStream(f);
-            ObjectInputStream oStream = new ObjectInputStream(fStream);
-            details = (ArrayList<loginData>) oStream.readObject();
-            oStream.close();
+            try (ObjectInputStream oStream = new ObjectInputStream(fStream)) {
+                userArray = (ArrayList<loginData>) oStream.readObject();
+                passArray = (ArrayList<loginData>) oStream.readObject();
+            }
         } catch (IOException | ClassNotFoundException ex) {
             System.out.println(ex);
         }
     }
+
     /**
      * @param args the command line arguments
      */

@@ -1,45 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JTextField" name="jTextField2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField4"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
-          <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="4">
-                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                <Column editable="true" title="Title 4" type="java.lang.Object"/>
-              </Table>
-            </Property>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-  </NonVisualComponents>
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[500, 499]"/>
-    </Property>
-    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -61,104 +24,114 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="firstnameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="surnameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="idlbl" alignment="0" min="-2" pref="21" max="-2" attributes="0"/>
-                          <Component id="dobLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ppsnumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="rateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="hoursLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="ppsnumberLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="addressLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="hoursLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rateLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="overtimeLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="grossLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="prsilbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="netpaylbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="taxCreditLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="usclbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="12" pref="124" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="firstnameLbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="firstname1TF" min="-2" pref="87" max="-2" attributes="0"/>
+                              <Component id="surnameLbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="surname1TF" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <Component id="dob1TF" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <Component id="ppsnumber1TF" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <Component id="id1TF" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="hoursTF" pref="73" max="32767" attributes="0"/>
-                                          <Component id="rateTF" pref="73" max="32767" attributes="0"/>
-                                          <Component id="addressTF" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="unonSubsLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="healthInsuranceLbl" min="-2" max="-2" attributes="0"/>
-                                  <Component id="overtimeLbl" min="-2" max="-2" attributes="0"/>
-                                  <Component id="grossLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="netpaylbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="usclbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="uscTF" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="taxCreditLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="23" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="netpayTF" min="-2" pref="72" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="taxCreditTF" max="32767" attributes="0"/>
-                                      <Component id="healthInsuranceTF" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="overtimeTF" alignment="0" pref="73" max="32767" attributes="0"/>
-                                      <Component id="unionSubsTF" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="grossTF" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="prsilbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="prsiTF" min="-2" pref="46" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                              <Component id="hoursTF" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="Clear" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="paylbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="payTF" min="-2" pref="55" max="-2" attributes="0"/>
+                                  <Component id="ppsnumber1TF" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="addressTF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="calculate" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="rateTF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="overtimeTF" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                              <Component id="add" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="grossTF" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="prsiTF" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="unionSubsTF" alignment="0" pref="71" max="32767" attributes="0"/>
+                                  <Component id="healthInsuranceTF" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="taxCreditTF" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="netpayTF" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="uscTF" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="payTF" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="search" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="viewAddedPayslip" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="viewAddedDetails" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                      <Component id="viewcalculations" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="add" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="firstname1TF" pref="71" max="32767" attributes="0"/>
+                                  <Component id="surname1TF" max="32767" attributes="0"/>
+                                  <Component id="id1TF" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="dob1TF" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
+                              <Component id="help" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="59" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="addressLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="healthInsuranceLbl" min="-2" max="-2" attributes="0"/>
+                          <Component id="paylbl" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="logout" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="idlbl" max="32767" attributes="0"/>
+                                  <Component id="dobLbl" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="viewAddedDetails" min="-2" pref="125" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -167,12 +140,14 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="firstnameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="firstname1TF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="logout" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="help" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="surnameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="surname1TF" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -181,149 +156,127 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="idlbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="id1TF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="viewAddedDetails" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="dobLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="dob1TF" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ppsnumberLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ppsnumber1TF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="calculate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="paylbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="payTF" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="addressLbl" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="addressTF" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="addressLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="addressTF" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="hoursLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Clear" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="hoursTF" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="rateLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="rateTF" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="overtimeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="overtimeTF" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="grossLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="grossTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="prsilbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="prsiTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="usclbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="uscTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="healthInsuranceLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="unonSubsLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="taxCreditTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="taxCreditLbl" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="healthInsuranceTF" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="unionSubsTF" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="add" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="viewAddedDetails" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="viewAddedPayslip" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="netpaylbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="netpayTF" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                      </Group>
+                  <Component id="overtimeLbl" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="add" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="overtimeTF" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="grossLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="grossTF" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="prsilbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="prsiTF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="netpaylbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="netpayTF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="taxCreditLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="taxCreditTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="search" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="usclbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="uscTF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="paylbl" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="payTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="viewcalculations" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="healthInsuranceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="healthInsuranceTF" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="unionSubsTF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="id1TF">
-    </Component>
-    <Component class="javax.swing.JTextField" name="ppsnumber1TF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ppsnumber1TFActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="dob1TF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dob1TFActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="firstnameLbl">
       <Properties>
-        <Property name="text" type="java.lang.String" value="First name"/>
+        <Property name="text" type="java.lang.String" value="firstname"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="surnameLbl">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Surname"/>
+        <Property name="text" type="java.lang.String" value="surname"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="idlbl">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ID"/>
+        <Property name="text" type="java.lang.String" value="id"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="dobLbl">
       <Properties>
-        <Property name="text" type="java.lang.String" value="DOB"/>
+        <Property name="text" type="java.lang.String" value="dob"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="firstname1TF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="firstname1TFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="ppsnumberLbl">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pps number"/>
+        <Property name="text" type="java.lang.String" value="pps number"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="surname1TF">
+    <Component class="javax.swing.JLabel" name="addressLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="adress"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="hoursLbl">
       <Properties>
@@ -335,34 +288,156 @@
         <Property name="text" type="java.lang.String" value="rate"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JLabel" name="overtimeLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="overtime"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="grossLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="gross"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="prsilbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PRSI"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="netpaylbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="netpay"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JLabel" name="taxCreditLbl">
       <Properties>
         <Property name="text" type="java.lang.String" value="tax credit"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="rateTF">
+    <Component class="javax.swing.JLabel" name="usclbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="USC"/>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="taxCreditTF">
+    <Component class="javax.swing.JTextField" name="firstname1TF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="surname1TF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="id1TF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="dob1TF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="ppsnumber1TF">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="taxCreditTFActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ppsnumber1TFActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="addressTF">
     </Component>
     <Component class="javax.swing.JTextField" name="hoursTF">
     </Component>
-    <Component class="javax.swing.JButton" name="viewAddedPayslip">
+    <Component class="javax.swing.JTextField" name="rateTF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="overtimeTF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="grossTF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="prsiTF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="netpayTF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="taxCreditTF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="uscTF">
+    </Component>
+    <Component class="javax.swing.JButton" name="logout">
       <Properties>
-        <Property name="text" type="java.lang.String" value="view added payslips"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="14" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="logout"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewAddedPayslipActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="viewAddedDetails">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="viewAddedDetails"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewAddedDetailsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="calculate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="view stored payslip"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculateActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Clear">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Clear txtField before adding new payslips"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClearActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="search">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="search payslip"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="viewcalculations">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="check standard tax rates in ireland "/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewcalculationsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="add">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="add new payslip"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="help">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="99" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="help?"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="helpActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="paylbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="pay"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="payTF">
     </Component>
     <Component class="javax.swing.JLabel" name="healthInsuranceLbl">
       <Properties>
         <Property name="text" type="java.lang.String" value="health insurance"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="unonSubsLbl">
+    <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="union subs"/>
       </Properties>
@@ -370,73 +445,8 @@
     <Component class="javax.swing.JTextField" name="healthInsuranceTF">
     </Component>
     <Component class="javax.swing.JTextField" name="unionSubsTF">
-    </Component>
-    <Component class="javax.swing.JButton" name="add">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="add"/>
-      </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="addressLbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="address"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="addressTF">
-    </Component>
-    <Component class="javax.swing.JButton" name="viewAddedDetails">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="view employees details"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewAddedDetailsActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="overtimeLbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="overTime"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="overtimeTF">
-    </Component>
-    <Component class="javax.swing.JTextField" name="netpayTF">
-    </Component>
-    <Component class="javax.swing.JLabel" name="netpaylbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="netPay"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="grossLbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Gross"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="grossTF">
-    </Component>
-    <Component class="javax.swing.JLabel" name="prsilbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="PRSI"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="prsiTF">
-    </Component>
-    <Component class="javax.swing.JLabel" name="usclbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="USC"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="uscTF">
-    </Component>
-    <Component class="javax.swing.JLabel" name="paylbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Pay"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="payTF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payTFActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="unionSubsTFActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

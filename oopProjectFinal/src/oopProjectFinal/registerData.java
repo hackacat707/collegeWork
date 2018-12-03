@@ -9,9 +9,11 @@ import java.io.Serializable;
 
 /**
  *
- * @author Anna
+ * @author x17448556
  */
+//this is the child class
 public class registerData extends loginData implements Serializable{
+    //variables
     private String name;
     private String surname;
     private String email;
@@ -19,6 +21,7 @@ public class registerData extends loginData implements Serializable{
     private String retype;
 
     public registerData(String name, String surname, String email, String phone, String retype, String username, String password) {
+        //contructor
         super(username, password);
         this.name = name;
         this.surname = surname;
@@ -31,6 +34,7 @@ public class registerData extends loginData implements Serializable{
    
 
     public registerData() {
+        //initialise variables
         super();
         name = "";
         surname = "";
@@ -38,7 +42,7 @@ public class registerData extends loginData implements Serializable{
         phone="";
         retype="";
     }
-
+    //setters and getters
     public String getName() {
         return name;
     }
@@ -79,7 +83,7 @@ public class registerData extends loginData implements Serializable{
         this.retype = retype;
     }
     
-    
+    //getdetails method
     public String getDetails(){
  
         return super.getPass()+getUser();

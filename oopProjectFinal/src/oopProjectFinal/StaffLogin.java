@@ -130,9 +130,9 @@ public class StaffLogin extends javax.swing.JFrame {
         {
             System.out.println("Welcome to the coffee shop");
             this.setVisible(false);
-        hrGUI resource = new hrGUI();
+       hrGUI resource = new hrGUI();
 
-        resource.setVisible(true);
+      resource.setVisible(true);
         }
         else
         {

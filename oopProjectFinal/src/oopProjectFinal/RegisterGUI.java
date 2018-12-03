@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package oopProjectFinal;
-
+//all imports are here
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  * @author Anna
  */
 public class RegisterGUI extends javax.swing.JFrame {
-
+    //main GUI class with the arrays
     loginData u;
     registerData t;
     ArrayList<loginData> details = new ArrayList();
@@ -217,6 +217,7 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         // TODO add your handling code here:
+        //add people to the the file
         registerData t = new registerData();
         loginData u = new loginData();
         t.setName(nameTxt.getText());
@@ -242,6 +243,7 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     private void displayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayBtnActionPerformed
         // TODO add your handling code here:
+        //displays current registered users
         for (int i = 0; i < userArray.size(); i++) {
             
             JOptionPane.showMessageDialog(null, "the details are " + userArray.get(i).getUser());
@@ -258,12 +260,14 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     private void toLoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toLoginBtnActionPerformed
         // TODO add your handling code here:
+        //this bring to the login page
         this.setVisible(false);
         LoginGUI lGUI = new LoginGUI();
 
         lGUI.setVisible(true);
     }//GEN-LAST:event_toLoginBtnActionPerformed
     public void writeToFile() {
+        //this is the write to file method
         try {
             File f = new File("user.dat");
             FileOutputStream fStream = new FileOutputStream(f);
@@ -289,6 +293,7 @@ public class RegisterGUI extends javax.swing.JFrame {
     }
 
     public void readFromFile() {
+        //this is the method to read from the file
         try {
             File f = new File("user.dat");
             FileInputStream fStream = new FileInputStream(f);
